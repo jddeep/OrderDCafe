@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cafe1"
+    >
+    <EditText
+        android:id="@+id/album_description_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name: "
+        android:textColorHint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:inputType="textMultiLine" />
+    <TextView
+        android:id="@+id/quan"
+        android:layout_marginTop="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quantity"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/quan1"
+        android:layout_marginTop="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quantity"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_alignParentRight="true"
+        android:paddingRight="14dp"
+   />
+    <LinearLayout
+        android:id="@+id/lay"
+        android:layout_below="@id/quan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="-"
+            android:onClick="decrement"/>
+        <TextView
+            android:id="@+id/quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-light"
+            android:padding="8dp"
+            android:textSize="18sp"
+            />
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="+"
+            android:onClick="increment"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lay1"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/quan1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="-"
+            android:onClick="decrement1"/>
+        <TextView
+            android:id="@+id/quantity1_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-light"
+            android:padding="8dp"
+            android:textSize="18sp"
+            />
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="+"
+            android:onClick="increment1"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/price"
+        android:paddingTop="12dp"
+        android:text="NOTE : $2 extra for More Sugar and $1 extra for less sugar"
+        android:textColor="#FFC107"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/price_text_view"
+        android:text="@string/pricepertext"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/ordersumm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ordersumm_text"
+        android:text="@string/ordsumm"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/ordersumm_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="76dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/initial"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/price_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ordersumm"
+        android:text="$10"
+        android:textColor="#FFFFFF"
+        android:textSize="21sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:layout_alignParentBottom="true"
+        android:onClick="submitOrder"
+        android:text="@string/order" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="126dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/extra1"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="italic"
+        android:buttonTint="@color/colcheck"/>
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/checkBox"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/extra2"
+        android:textColor="#FFC107"
+        android:textSize="28sp"
+        android:textStyle="italic"
+        android:buttonTint="@color/colcheck"/>
+
+
+</RelativeLayout>
+</ScrollView>

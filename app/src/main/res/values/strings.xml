@@ -1,0 +1,12 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">JD Cafe</string>
+    <string name="quantity">Cups: </string>
+    <string name="extra1">More Sugar \nwith Cream</string>
+    <string name="extra2">Less Sugar \nwith Cream</string>
+    <string name="pricepertext">Price per Cup</string>
+    <string name="ordsumm">Order Summary: </string>
+    <string name="initial">None Right Now...</string>
+    <string name="order">Order</string>
+    <string name="editable_name">Name: <xliff:g id="name" example="jaideep">%s</xliff:g>
+    </string>
+</resources>
